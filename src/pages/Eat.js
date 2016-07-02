@@ -17,6 +17,15 @@ const styles = {
   }
 };
 
+const lang_en = {
+  true: {
+      budget: 'Budget:'
+  },
+  false: {
+      budget: '平均予算:'
+  }
+}
+
 export default class Eat extends React.Component {
   constructor(props) {
     super(props);
@@ -42,11 +51,21 @@ export default class Eat extends React.Component {
     console.log(name);
   }
 
-  onTranslationButtonClick() {
-    console.log('hoge');
+  onTranslationButtonClick(event) {
     this.setState({
+      data: {rest: [this.state.data.rest[event]]},
       isEnglish: !this.state.isEnglish
     });
+    if (this.state.isEnglish) {
+      jquery.ajax({
+        type: 'get',
+        url: './eat?freeword=' + this.state.freeword + '&lat=' + this.state.latlng.lat + '&lng=' + this.state.latlng.lng
+      }).done((data) => {
+        this.setState({
+          data: data
+        });
+      });
+    }
   }
 
   mapClicked(mapProps, map, clickEvent) {
@@ -71,51 +90,70 @@ export default class Eat extends React.Component {
   }
 
   render() {
+
+    let restran_list = ""
+    let marker_list = ""
+
     if (this.state.data == null) {
       return null;
     }
 
     const rest = this.state.data.rest;
-    if (rest == null) {
-      return null;
+    if (rest != null) {
+      restran_list = rest.map((item, i) => {
+        let img = ( <img className='spot_item_image' src='images/no_image.svg' /> )
+        let pr = '';
+        let opentime = "";
+        let budget = "";
+        let credit_card = "";
+        if (typeof(item.image_url.shop_image1) !== 'object') {
+          img = (
+            <img className='spot_item_image' src={item.image_url.shop_image1} />
+          )
+        } else if (typeof(item.image_url.shop_image2) !== 'object') {
+          img = (
+            <img className='spot_item_image' src={item.image_url.shop_image2} />
+          )
+        }
+        if (typeof(item.opentime) !== 'object') {
+          opentime = <div className='spot_item_opentime'>{item.opentime}</div>
+        }
+        if (typeof(item.pr.pr_long) !== 'object') {
+          pr = <div className='spot_item_pr'>{item.pr.pr_long}</div>
+        }
+        if (typeof(item.budget) !== 'object') {
+          budget = <div className='spot_item_budget'>{lang_en[this.state.isEnglish].budget + item.budget}円</div>
+        }
+
+        return (
+          <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
+            <CardHeader title={item.name}
+                        subtitle={pr}/>
+            <CardText>
+              {img}
+              {opentime}
+              {budget}
+            </CardText>
+          </Card>
+        )
+      });
+
+      marker_list = rest.map((item, i) => {
+        return (
+          <Marker onClick={this.onMarkerClick}
+                  name={item.name}
+                  position={{lat: item.latitude, lng:item.longitude}}
+                  key={i} />
+        )
+      })
+    } else {
     }
 
-    const restran_list = rest.map((item, i) => {
-      let img = (
-          <img className='spot_item_image' src='images/no_image.svg' />
-      )
-      if (typeof(item.image_url.shop_image1) !== 'object') {
-        img = (
-          <img className='spot_item_image' src={item.image_url.shop_image1} />
-        )
-      } else if (typeof(item.image_url.shop_image2) !== 'object') {
-        img = (
-          <img className='spot_item_image' src={item.image_url.shop_image2} />
-        )
-      }
-      return (
-        <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this)} key={i}>
-          <CardHeader title={item.name}
-                      subtitle={item.pr_short}/>
-          <CardText>
-            {img}
-          </CardText>
-        </Card>
-      )
-    });
-
-    const marker_list = rest.map((item, i) => {
-      return (
-        <Marker onClick={this.onMarkerClick}
-                name={item.name}
-                position={{lat: item.latitude, lng:item.longitude}}
-                key={i} />
-      )
-    })
-
-    let submit_message = '英語へ';
+    let map_message = 'オススメのお店の場所はどこの辺りですか？';
+    let where_message = 'そのお店はこの中のどれですか？';
     if (this.state.isEnglish) {
-      submit_message = 'In Japanese';
+      map_message = '';
+      where_message = '';
     }
 
     var profile = {
@@ -141,6 +179,9 @@ export default class Eat extends React.Component {
         <Profile name='Tom Gibson'
                  message={message}
                  show={!this.state.isEnglish} />
+        <div className='map_message'>
+          {map_message}
+        </div>
         <div className='map'>
           <Map style={styles.map}
                google={window.google}
@@ -148,6 +189,9 @@ export default class Eat extends React.Component {
                onDragend={this.onMapDragend.bind(this)}
                initialCenter={this.state.latlng}>
           </Map>
+        </div>
+        <div className='where_message'>
+          {where_message}
         </div>
         <div className='spot_list'>
           {restran_list}
