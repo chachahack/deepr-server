@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="Author" content="chachahack">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Deepr! | deeper communication</title>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="msg">
+      <!-- 自己紹介的なあれ -->
+    </div>
+    <div class="map">
+      <!-- pin刺してもらう場所 -->
+    </div>
+    <div class="recommend">
+      <!-- 刺してもらったらベロっと出す場所 -->
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+    // ajaxで'/fun'を取りに行く
+    $.ajax({
+      type: 'get',
+      url: './fun?name=hoge'
+    }).done(function(data) {
+      console.log(data);
 
+      var genre = data['genre'];
+      var user = data['user'];
+
+      $('h1').html(genre+'を探しています');
+      $('.msg').html('こんにちは、'+user+'です。');
+    });
+
+    $('#trigger').click(function() {
+      // 何をtriggerにする・・？pinした瞬間？
+      // pinされたあたりのspotを取りに行く
+      $.ajax({
+
+      }).done(function(data) {
+          $.each(data, function(key, val) {
+            $('recommend').html(key+': '+val);
+          });
+      });
+
+
+    });
+
+    </script>
+  </body>
+</html>

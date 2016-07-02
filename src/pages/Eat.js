@@ -46,7 +46,7 @@ export default class Eat extends React.Component {
 
     const restran_list = rest.map((item, i) => {
       return (
-        Spot(item.name, item.address, i)
+        Spot(item, i)
       )
     });
 
@@ -69,7 +69,6 @@ export default class Eat extends React.Component {
             {marker_list}
           </Map>
         </div>
-
         {restran_list}
       </div>
     );

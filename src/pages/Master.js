@@ -20,10 +20,10 @@ const Master = React.createClass({
 
   render() {
     return (
-      <div style={{width: '100%'}}>
-        <div style={styles.content}>
-          {this.props.children}
-        </div>
+      <header></header>
+      <div style={styles.content}>
+        <!-- restaurant list -->
+        {this.props.children}
       </div>
     )
   }
