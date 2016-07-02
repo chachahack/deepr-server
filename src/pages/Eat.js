@@ -118,10 +118,23 @@ export default class Eat extends React.Component {
       submit_message = 'In Japanese';
     }
 
-    const message = '初めまして！僕の名前はTomといいます。28歳で、2日前にカリフォル'
-+ 'ニアから日本に来ました。趣味はダーツとマラソンです。'
-+ '僕は今家族で行ける静かな日本食ディナーレストランを探しています。'
-+ 'もしオススメのお店を知っていたら、下の地図に入力してください！'
+    var profile = {
+      "user_name": "Tom",
+      "age": "28歳",
+      "day": "2",
+      "from": "カリフォルニア",
+      "hobby": {'ダーツ', 'マラソン'},　
+      "search": {'家族で行ける', '静かな', '日本食', 'ディナーレストラン'}
+    }
+
+    const message = '初めまして！僕の名前は<span id="user_name">'+profile['user_name']+'</span>といいます。<span id="age">'+profile['age']+'歳</"span">で、<span id="day">'+profile['day']+'</span>日前に'
++ '<span id="from">'+profile['from']+'</span>から日本に来ました。趣味は<span id="hobby1">'+profile['hobby'][0]+'</span>と<span id="hobby2">'+profile['hobby'][1]+'</span>です。'
++ '僕は今<span id="search1">'+profile['search'][0]+'</span><span id="search2">'+profile['search'][1]'</span><span id="search3">'profile['search'][2]'</span><span id="search4">'profile['search'][3]'</span>を探しています。'
++ 'もしオススメのお店を知っていたら、ぜひ教えてください！'
+
+    const question1 = 'オススメのお店の場所はどこの辺りですか？';
+
+    const question2 = 'そのお店はこの中のどれですか？';
 
     return(
       <div className='eat card'>
