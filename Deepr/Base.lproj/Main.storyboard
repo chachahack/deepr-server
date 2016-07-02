@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,6 +24,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8J-EG-CY7">
+                                <rect key="frame" x="264" y="388" width="75" height="30"/>
+                                <state key="normal" title="webviewへ"/>
+                                <connections>
+                                    <segue destination="Biz-jH-vag" kind="show" id="6ue-a9-gbE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -33,6 +41,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bEu-JC-Uit">
+            <objects>
+                <viewController id="Biz-jH-vag" customClass="WebViewController" customModule="Deepr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfg-80-Zj9"/>
+                        <viewControllerLayoutGuide type="bottom" id="gen-gl-M0O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJU-On-ruL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-ko-dTu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1J8-ko-dTu" secondAttribute="trailing" constant="-20" id="acv-Nw-4FV"/>
+                            <constraint firstItem="1J8-ko-dTu" firstAttribute="leading" secondItem="jJU-On-ruL" secondAttribute="leadingMargin" constant="-20" id="gvx-eo-znW"/>
+                            <constraint firstItem="1J8-ko-dTu" firstAttribute="top" secondItem="jJU-On-ruL" secondAttribute="topMargin" id="jnv-5W-GYv"/>
+                            <constraint firstItem="1J8-ko-dTu" firstAttribute="centerY" secondItem="jJU-On-ruL" secondAttribute="centerY" id="uDh-j0-6OB"/>
+                            <constraint firstItem="gen-gl-M0O" firstAttribute="top" secondItem="1J8-ko-dTu" secondAttribute="bottom" id="vrp-Hy-P32"/>
+                            <constraint firstItem="1J8-ko-dTu" firstAttribute="centerX" secondItem="jJU-On-ruL" secondAttribute="centerX" id="yqu-hV-use"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="1J8-ko-dTu" id="yPs-SG-7cr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXA-cm-42d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1339" y="385"/>
         </scene>
     </scenes>
 </document>
