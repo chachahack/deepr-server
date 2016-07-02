@@ -5,12 +5,12 @@ var API_URL = 'http://api.gnavi.co.jp/RestSearchAPI/20150630/'
 var KEY_ID = gnavi_conf.key
 var URL = API_URL + '?keyid=' + KEY_ID + '&format=json'
 
-exports.search = (freeword) => {
+exports.search = (freeword, lat, lng) => {
   return new Promise((resolve, reject) => {
     var word = new Buffer(freeword, 'base64')
     console.log(word)
     var options = {
-      url: URL + '&freeword=' + word,
+      url: URL + '&freeword=' + word + '&latitude=' + lat + '&longitude=' + lng,
       method: 'GET',
       json: true,
     }
