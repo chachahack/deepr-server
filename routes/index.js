@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/eat', (req, res, next) => {
-  gnavi.search(req.query['freeword'], req.query['lat'], req.query['lng'])
+  gnavi.search(req.query['freeword'], req.query['lat'], req.query['lng'], 1)
     .then(data => res.json(data))
     .catch(data => res.json(data))
 });

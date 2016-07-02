@@ -4,11 +4,16 @@ import jquery from 'jquery';
 
 import {Spot} from '../components/Spot';
 import {Map, Marker, InfoWindow} from 'google-maps-react'
+import Profile from '../components/Profile'
+
+import Paper from 'material-ui/Paper';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 const styles = {
   map: {
+    zIndex: 0,
     width: "100%",
-    height: 300
+    height: 400,
   }
 };
 
@@ -17,7 +22,10 @@ export default class Eat extends React.Component {
     super(props);
 
     this.state = {
-      data: {}
+      data: {},
+      isEnglish: false,
+      latlng: {lat: this.props.location.query.lat, lng:this.props.location.query.lng},
+      freeword: this.props.location.query.freeword
     }
   }
 
@@ -34,6 +42,34 @@ export default class Eat extends React.Component {
     console.log(name);
   }
 
+  onTranslationButtonClick() {
+    console.log('hoge');
+    this.setState({
+      isEnglish: !this.state.isEnglish
+    });
+  }
+
+  mapClicked(mapProps, map, clickEvent) {
+    this.setState({
+      latlng:{lat: clickEvent.latLng.lat().toString(), lng:clickEvent.latLng.lng().toString()}
+    })
+  }
+
+  onMapDragend(mapProps, map) {
+    jquery.ajax({
+      type: 'get',
+      url: './eat?freeword=' + this.state.freeword + '&lat=' + map.center.lat() + '&lng=' + map.center.lng()
+    }).done((data) => {
+      this.setState({
+        data: data,
+        latlng: {
+          lat: map.center.lat(),
+          lng: map.center.lng()
+        }
+      });
+    });
+  }
+
   render() {
     if (this.state.data == null) {
       return null;
@@ -45,8 +81,26 @@ export default class Eat extends React.Component {
     }
 
     const restran_list = rest.map((item, i) => {
+      let img = (
+          <img className='spot_item_image' src='images/no_image.svg' />
+      )
+      if (typeof(item.image_url.shop_image1) !== 'object') {
+        img = (
+          <img className='spot_item_image' src={item.image_url.shop_image1} />
+        )
+      } else if (typeof(item.image_url.shop_image2) !== 'object') {
+        img = (
+          <img className='spot_item_image' src={item.image_url.shop_image2} />
+        )
+      }
       return (
-        Spot(item, i)
+        <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this)} key={i}>
+          <CardHeader title={item.name}
+                      subtitle={item.pr_short}/>
+          <CardText>
+            {img}
+          </CardText>
+        </Card>
       )
     });
 
@@ -59,17 +113,32 @@ export default class Eat extends React.Component {
       )
     })
 
+    let submit_message = '英語へ';
+    if (this.state.isEnglish) {
+      submit_message = 'In Japanese';
+    }
+
+    const message = '初めまして！僕の名前はTomといいます。28歳で、2日前にカリフォル'
++ 'ニアから日本に来ました。趣味はダーツとマラソンです。'
++ '僕は今家族で行ける静かな日本食ディナーレストランを探しています。'
++ 'もしオススメのお店を知っていたら、下の地図に入力してください！'
+
     return(
-      <div className='eat'>
+      <div className='eat card'>
+        <Profile name='Tom Gibson'
+                 message={message}
+                 show={!this.state.isEnglish} />
         <div className='map'>
           <Map style={styles.map}
                google={window.google}
                zoom={17}
-               initialCenter={{lat: this.props.location.query.lat, lng:this.props.location.query.lng}}>
-            {marker_list}
+               onDragend={this.onMapDragend.bind(this)}
+               initialCenter={this.state.latlng}>
           </Map>
         </div>
-        {restran_list}
+        <div className='spot_list'>
+          {restran_list}
+        </div>
       </div>
     );
   }
