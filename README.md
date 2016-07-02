@@ -2,8 +2,15 @@
 
 # インストール
 
+    npm i
+
+# 実行
+
+    npm run start
 
 # テスト
+
+    npm run test
 
 
 # EndPoint
