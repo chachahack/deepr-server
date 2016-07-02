@@ -61,8 +61,6 @@ export default class Eat extends React.Component {
 
     return(
       <div className='eat'>
-        <div className='profile'>
-        </div>
         <div className='map'>
           <Map style={styles.map}
                google={window.google}
