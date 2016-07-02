@@ -161,7 +161,7 @@ export default class Eat extends React.Component {
       "age": "28歳",
       "day": "2",
       "from": "カリフォルニア",
-      "hobby": {'ダーツ', 'マラソン'},　
+      "hobby": {'ダーツ', 'マラソン'},
       "search": {'家族で行ける', '静かな', '日本食', 'ディナーレストラン'}
     }
 
