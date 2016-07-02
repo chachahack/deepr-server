@@ -47,6 +47,12 @@ export default class Eat extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    if (this.state.isEnglish) {
+      ReactDOM.findDOMNode(this).scrollIntoView();
+    }
+  }
+
   onMarkerClick(name) {
     console.log(name);
   }
@@ -75,18 +81,20 @@ export default class Eat extends React.Component {
   }
 
   onMapDragend(mapProps, map) {
-    jquery.ajax({
-      type: 'get',
-      url: './eat?freeword=' + this.state.freeword + '&lat=' + map.center.lat() + '&lng=' + map.center.lng()
-    }).done((data) => {
-      this.setState({
-        data: data,
-        latlng: {
-          lat: map.center.lat(),
-          lng: map.center.lng()
-        }
+    if (!this.state.isEnglish) {
+      jquery.ajax({
+        type: 'get',
+        url: './eat?freeword=' + this.state.freeword + '&lat=' + map.center.lat() + '&lng=' + map.center.lng()
+      }).done((data) => {
+        this.setState({
+          data: data,
+          latlng: {
+            lat: map.center.lat(),
+            lng: map.center.lng()
+          }
+        });
       });
-    });
+    }
   }
 
   render() {
@@ -119,7 +127,12 @@ export default class Eat extends React.Component {
           opentime = <div className='spot_item_opentime'>{item.opentime}</div>
         }
         if (typeof(item.pr.pr_long) !== 'object') {
-          pr = <div className='spot_item_pr'>{item.pr.pr_long}</div>
+          let message = item.pr.pr_long;
+          const message_limit = 100
+          if (message.length > message_limit) {
+            message = message.substring(0, message_limit) + '...';
+          }
+          pr = <div className='spot_item_pr'>{message}</div>
         }
         if (typeof(item.budget) !== 'object') {
           budget = <div className='spot_item_budget'>{lang_en[this.state.isEnglish].budget + item.budget}円</div>
