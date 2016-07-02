@@ -21,17 +21,15 @@
       url: './fun?name=hoge'
     }).done(function(data) {
       console.log(data);
+
+      var genre = data['genre'];
+      var user = data['user'];
+      var name = data['name']; // 店舗名とか
+
+      $('h1').html(genre[]+'を探しています');
+      $('.msg').html('こんにちは、'+user+'です。');
     });
 
-    // 変数にとりあえず固定値突っ込む
-    $(function(){
-      var user = 'Tom';
-      var name = '';
-
-
-      $('h1').html('title_hoge');
-      $('.msg').html('こんにちは、'+name+'です。');
-    });
     </script>
   </body>
 </html>
