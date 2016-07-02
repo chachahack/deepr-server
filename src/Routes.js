@@ -13,7 +13,7 @@ import Master from './pages/Master';
 
 const AppRoutes = (
   <Route path="/" component={Master}>
-    <Route path="eat/:query" component={Eat}/>
+    <Route path="eat" component={Eat}/>
     <Route path="fun" component={Fun}/>
     <Route path="stay" component={Stay}/>
     <Route path="emergency" component={Emergency}/>
