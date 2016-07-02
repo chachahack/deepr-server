@@ -1,8 +1,23 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  height: 300px;
+  width: 300px;
 }
