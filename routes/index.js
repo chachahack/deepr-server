@@ -1,7 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-const dummy = require('./dummy.json');
+// const dummy = require('./dummy.json');
+const gnavi = require('./gnavi');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,7 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/eat', (req, res, next) => {
-  res.json(dummy);
-})
+  gnavi.search(req.query['freeword'], req.query['lat'], req.query['lng'])
+    .then(data => res.json(data))
+    .catch(data => res.json(data))
+});
 
 module.exports = router;
