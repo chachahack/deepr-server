@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Link,
-} from 'react-router';
-
 import jquery from 'jquery';
 
 import {Spot} from '../components/Spot';
+import {Map, Marker, InfoWindow} from 'google-maps-react'
 
 const styles = {
+  map: {
+    width: "100%",
+    height: 300
+  }
 };
 
 export default class Eat extends React.Component {
@@ -29,6 +30,10 @@ export default class Eat extends React.Component {
     });
   }
 
+  onMarkerClick(name) {
+    console.log(name);
+  }
+
   render() {
     if (this.state.data == null) {
       return null;
@@ -44,8 +49,27 @@ export default class Eat extends React.Component {
         Spot(item.name, item.address, i)
       )
     });
+
+    const marker_list = rest.map((item, i) => {
+      return (
+        <Marker onClick={this.onMarkerClick}
+                name={item.name}
+                position={{lat: item.latitude, lng:item.longitude}}
+                key={i} />
+      )
+    })
+
     return(
       <div className='eat'>
+        <div className='map'>
+          <Map style={styles.map}
+               google={window.google}
+               zoom={17}
+               initialCenter={{lat: this.props.location.query.lat, lng:this.props.location.query.lng}}>
+            {marker_list}
+          </Map>
+        </div>
+
         {restran_list}
       </div>
     );
