@@ -1,0 +1,824 @@
+{
+  "@attributes": {
+    "api_version": "20150630"
+  },
+  "total_hit_count": "417",
+  "hit_per_page": "10",
+  "page_offset": "1",
+  "rest": [
+    {
+      "@attributes": {
+        "order": "0"
+      },
+      "id": "g466919",
+      "update_date": "2016-07-01 05:18:52",
+      "name": "ロスカボス 新宿本店",
+      "name_kana": "ロスカボス シンジュクホンテン",
+      "latitude": "35.691161",
+      "longitude": "139.707144",
+      "category": "ダーツ＆スポーツバー",
+      "url": "http://r.gnavi.co.jp/g466919/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/g466919/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/g466919/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/g466919/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/e61asb870000/t_00vs.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/e61asb870000/t_00ox.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=g466919&q=6"
+      },
+      "address": "〒160-0021 東京都新宿区歌舞伎町1-3-16 パセラリゾーツ8F",
+      "tel": "050-5799-5442",
+      "tel_sub": "03-5291-8378",
+      "fax": "03-5291-8354",
+      "opentime": "月～土・祝前日 18:00～翌6:00<BR>日・祝日 18:00～翌5:00",
+      "holiday": "無",
+      "access": {
+        "line": "ＪＲ",
+        "station": "新宿駅",
+        "station_exit": "東口",
+        "walk": "5",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "【新宿最大級スポーツ観戦が楽しめるお店】 〔大型プロジェクター〕&〔50インチモニター5台〕 どの席からもゆったりスポーツ観戦が可能！！",
+        "pr_long": "新宿で安心して遊べるスポーツ&ダーツバー♪<BR><BR>スポーツ観戦にも最適な環境です♪<BR>どの席からもゆったりスポーツ観戦が可能！！<BR>サッカー、野球、ラグビー、バスケ、アメフト、モータースポーツ、Xゲーム、etc・・・<BR>120インチプロジェクター & 50インチモニター5台の店内で<BR>皆でワイワイ観戦しませんか！？<BR>話題のスポーツを随時放映予定♪<BR>ご希望のスポーツの放映も可能なのでお気軽にお問い合わせください！<BR>広島カープ推してます♪"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2115",
+        "areaname_s": "新宿東口・歌舞伎町",
+        "category_code_l": [
+          "RSFST10000",
+          "RSFST10000"
+        ],
+        "category_name_l": [
+          "ダイニングバー・バー・ビアホール",
+          "ダイニングバー・バー・ビアホール"
+        ],
+        "category_code_s": [
+          "RSFST10005",
+          "RSFST10011"
+        ],
+        "category_name_s": [
+          "バー",
+          "ダーツバー・ゴルフバー"
+        ]
+      },
+      "budget": "2000",
+      "party": "4000",
+      "lunch": {},
+      "credit_card": "VISA,MasterCard,ダイナースクラブ,アメリカン・エキスプレス,JCB",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "1"
+      },
+      "id": "gas9500",
+      "update_date": "2016-07-02 01:51:50",
+      "name": "東京SPORTS CAFE ",
+      "name_kana": "トウキョウスポーツカフェ",
+      "latitude": "35.660617",
+      "longitude": "139.733686",
+      "category": "居酒屋＆ビアレストラン",
+      "url": "http://r.gnavi.co.jp/gas9500/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gas9500/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/gas9500/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/gas9500/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/huypac6b0000/t_0022.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/huypac6b0000/t_0023.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gas9500&q=6"
+      },
+      "address": "〒106-0032 東京都港区六本木7-13-8 フュージョンビル2F",
+      "tel": "03-5411-8939",
+      "tel_sub": {},
+      "fax": {},
+      "opentime": "月～土 17:00～翌6:00",
+      "holiday": "毎週日曜日<BR>※※祝日は営業します。",
+      "access": {
+        "line": "地下鉄日比谷線",
+        "station": "六本木駅",
+        "station_exit": {},
+        "walk": "1",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "【六本木駅1分】120分飲み放題付4,000円→3,500円！ どこからでも観戦できる大型モニターでスポーツ観戦を楽しもう！ パーティー・イベントにも是非",
+        "pr_long": "六本木でスポーツ観戦なら【東京SPORTS CAFE】！！<BR>どの方向からでも観戦できる大型プロジェクター＆マルチタッチスクリーンを完備<BR>【コースメニューも充実！】<BR>2時間飲み放題付きコースは生ビール・スパークリングワイン飲み放題で3,500円！<BR>貸切は20名様～対応可能！ご予約随時受け付け中♪<BR><BR>【女性限定ハッピーアワー毎日開催！】<BR>OPEN～20：00まで女性50％オフ！！（要予約）<BR>【お一人様もＯＫ】<BR>スポーツ好きが集まれば、大パーティに変身！？<BR>もちろん女子会・合コン・パーティーにも是非！<BR>国際色豊かな六本木で各国より集結したサポーターと<BR>スタッフも一丸となってヒートアップできるスポーツバーです！！"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2121",
+        "areaname_s": "六本木（乃木坂方面）",
+        "category_code_l": [
+          "RSFST12000",
+          "RSFST10000"
+        ],
+        "category_name_l": [
+          "欧米・各国料理",
+          "ダイニングバー・バー・ビアホール"
+        ],
+        "category_code_s": [
+          "RSFST12012",
+          "RSFST10003"
+        ],
+        "category_name_s": [
+          "欧米・各国料理 その他",
+          "ビアレストラン"
+        ]
+      },
+      "budget": "3500",
+      "party": "3000",
+      "lunch": {},
+      "credit_card": "VISA,MasterCard,ダイナースクラブ,アメリカン・エキスプレス,JCB",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "2"
+      },
+      "id": "gdh1600",
+      "update_date": "2016-07-01 03:39:47",
+      "name": "東京ラフストーリー ",
+      "name_kana": "トウキョウラフストーリー",
+      "latitude": "35.734231",
+      "longitude": "139.674903",
+      "category": "スポーツ居酒屋",
+      "url": "http://r.gnavi.co.jp/hjcz541m0000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gdh1600/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/hjcz541m0000/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/gdh1600/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/hjcz541m0000/t_0002.jpg",
+        "shop_image2": {},
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gdh1600&q=6"
+      },
+      "address": "〒176-0006 東京都練馬区栄町4-5 メゾン・ド・ラフィネB1",
+      "tel": "050-5788-7764",
+      "tel_sub": "03-6755-4706",
+      "fax": {},
+      "opentime": " ディナー：18:00～翌5:00(L.O.4:30)",
+      "holiday": "不定休日あり",
+      "access": {
+        "line": "西武池袋線",
+        "station": "江古田駅",
+        "station_exit": {},
+        "walk": "2",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "【東京ラフストーリー】です！【ラブ】じゃなくて【ラフ】です！ 【愛】ではなくて【笑】なんです！笑いの絶えないお店です！ 【忘年会予約承ります！】",
+        "pr_long": "【ご宴会予約受付中！貸切、女子会、サークル飲み会は是非東京ラフストーリーで！】<BR>【皆様の1年の締めくくりを笑顔でお届けします！忘年会ご予約承ります！】<BR>【大人気！不思議な鍋お試しください！】<BR>大迫力の60インチ完備！スポーツ観戦が楽しめます！！<BR>チャージ料なし、250円からのドリンクメニューは練馬区、いや東京都、いや日本でも<BR>最安ランクの価格でご提供！！<BR>正直うるさいお店だと思います。笑<BR>ですがアットホームなお店なのは間違いないです（￣▽￣）<BR>【学生＆女子会クーポン】【じゃんけんクーポン】あります！<BR>ご予約、お問い合わせはお電話にてお受けします！"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2223",
+        "areaname_s": "江古田",
+        "category_code_l": [
+          "RSFST10000",
+          "RSFST09000"
+        ],
+        "category_name_l": [
+          "ダイニングバー・バー・ビアホール",
+          "居酒屋"
+        ],
+        "category_code_s": [
+          "RSFST10005",
+          "RSFST09004"
+        ],
+        "category_name_s": [
+          "バー",
+          "居酒屋"
+        ]
+      },
+      "budget": "2500",
+      "party": {},
+      "lunch": {},
+      "credit_card": {},
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "3"
+      },
+      "id": "gdh1601",
+      "update_date": "2016-03-19 05:38:46",
+      "name": "東京ラフストーリー 大泉学園店",
+      "name_kana": "トウキョウラフストーリー オオイズミガクエンテン",
+      "latitude": "35.745947",
+      "longitude": "139.588225",
+      "category": "鉄板串焼きダイニング",
+      "url": "http://r.gnavi.co.jp/6319eawr0000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gdh1601/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": {},
+        "mobile": {}
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/6319eawr0000/t_001b.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/6319eawr0000/t_0023.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gdh1601&q=6"
+      },
+      "address": "〒178-0063 東京都練馬区東大泉6-52-11 1F",
+      "tel": "050-5786-0277",
+      "tel_sub": "03-6767-6717",
+      "fax": {},
+      "opentime": "月～日 18:00～翌5:00(L.O.4:30)",
+      "holiday": "不定休日あり",
+      "access": {
+        "line": "西武池袋線",
+        "station": "大泉学園駅",
+        "station_exit": {},
+        "walk": "2",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "【東京ラフストーリー】です！【ラブ】じゃなくて【ラフ】です！ 【愛】ではなくて【笑】なんです！笑いの絶えないお店です！",
+        "pr_long": "大泉学園駅徒歩2分！お客様に笑顔をお届けします！<BR>笑顔が絶えない店内でスポーツ観戦もして頂けます！<BR>【東京ラフストーリー大泉学園店オススメコース】<BR>うけねらいコース2時間飲み放題付き料理8品2500円！<BR>前菜3品<BR>サラダ<BR>お刺身盛り合わせ<BR>鉄板串焼き盛り合わせ<BR>お食事<BR>デザート<BR>鉄板串焼、厳選日本酒500円などオススメ多数ございます！！<BR>【姉妹店：東京ラフストーリー 江古田】<BR>東京都練馬区栄町4-5 メゾン・ド・ラフィネB1<BR>050-5788-7764"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2227",
+        "areaname_s": "大泉学園",
+        "category_code_l": [
+          "RSFST09000",
+          "RSFST10000"
+        ],
+        "category_name_l": [
+          "居酒屋",
+          "ダイニングバー・バー・ビアホール"
+        ],
+        "category_code_s": [
+          "RSFST09004",
+          "RSFST10001"
+        ],
+        "category_name_s": [
+          "居酒屋",
+          "ダイニングバー"
+        ]
+      },
+      "budget": "2000",
+      "party": {},
+      "lunch": {},
+      "credit_card": {},
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "0",
+        "pc_coupon": "0"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "4"
+      },
+      "id": "gdaz600",
+      "update_date": "2016-07-02 03:32:53",
+      "name": "加賀屋 東京駅前店",
+      "name_kana": "カガヤ トウキョウエキマエテン",
+      "latitude": "35.675456",
+      "longitude": "139.772647",
+      "category": "銘酒が揃う居酒屋・個室",
+      "url": "http://r.gnavi.co.jp/ea02ajfn0000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gdaz600/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/ea02ajfn0000/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/gdaz600/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/ea02ajfn0000/t_0004.jpg",
+        "shop_image2": {},
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gdaz600&q=6"
+      },
+      "address": "〒104-0028 東京都中央区八重洲2-3-7 斎原ビル1F",
+      "tel": "050-5788-1372",
+      "tel_sub": "03-3275-3763",
+      "fax": "03-3275-3763",
+      "opentime": " ランチ：11:00～14:00(L.O.22:30)<BR>月～木 ディナー：16:00～23:30(L.O.22:40)<BR>金 ディナー：16:00～24:00(L.O.23:30)<BR>土 ディナー：16:00～23:00(L.O.22:30)(  ※お昼からのご宴会、各種ご会合、コース等、貸切も承ります（要予約）)",
+      "holiday": "毎週日曜日 祝日",
+      "access": {
+        "line": "ＪＲ",
+        "station": "東京駅",
+        "station_exit": "八重洲南口",
+        "walk": "3",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "■東京駅八重洲徒歩3分！ ■全国の旨い銘酒が圧巻の取り揃え！夏酒・氷点下ビールあり ■完全個室16～20名様! ■加賀屋オススメ3H飲放コース\\5500⇒\\4600!昼宴会も承ります!!",
+        "pr_long": "■加賀屋のお酒<BR>旨い酒のナイナップに自信あり!地酒、銘酒だけで常時60種以上!<BR>十四代、獺祭、3Mなど幻のお酒も常時仕入れてます<BR>都内でも加賀屋でしか味わえない希少酒も・・・<BR>女性にも人気⇒自家製サングリア・梅酒・果実酒・ワイン・エクストラコールド・氷点下スーパードライ<BR><BR>■嬉しいハッピーアワー開催<BR>16:00～18:30限定！-0℃ビール、ハイボール、ワインなどall400円でご提供<BR>■完全個室でご宴会<BR>20名様・16名様個室をご用意!お客様の様々なシーンに対応可能<BR>二次会・スポーツ観戦に対応できる設備も完備!<BR>■３時間飲み放題付コース<BR>月火土は飲放3h制！水木は+500円<BR>《定番人気》加賀屋コース  5,500円⇒4,600円<BR>《旨味凝縮》鶏ガラ鍋コース 6,000円⇒5,400円<BR>↑さらに!歓送迎会の利用なら・・・<BR>予約限定!主役に花束プレゼントクーポン!※8名様以上でご利用可<BR><BR>東京駅八重洲・南口徒歩3分◆京橋駅・7番出口徒歩3分"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2260",
+        "areaname_s": "東京駅（八重洲）",
+        "category_code_l": [
+          "RSFST09000",
+          "RSFST03000"
+        ],
+        "category_name_l": [
+          "居酒屋",
+          "すし・魚料理・シーフード"
+        ],
+        "category_code_s": [
+          "RSFST09004",
+          "RSFST03003"
+        ],
+        "category_name_s": [
+          "居酒屋",
+          "刺身・海鮮料理"
+        ]
+      },
+      "budget": "3500",
+      "party": "4000",
+      "lunch": "800",
+      "credit_card": {},
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "5"
+      },
+      "id": "g868205",
+      "update_date": "2016-07-02 03:31:45",
+      "name": "ロスカボス 六本木店",
+      "name_kana": "ロスカボス ロッポンギテン",
+      "latitude": "35.658450",
+      "longitude": "139.738853",
+      "category": "ダーツ＆スポーツバー",
+      "url": "http://r.gnavi.co.jp/g868205/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/g868205/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/g868205/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/g868205/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/ew7euk290000/t_0093.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/ew7euk290000/t_0094.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=g868205&q=6"
+      },
+      "address": "〒106-0032 東京都港区六本木5-16-3 パセラリゾーツB1F",
+      "tel": "050-5786-2409",
+      "tel_sub": "03-5114-1713",
+      "fax": "03-3505-5444",
+      "opentime": "月～日 17:00～翌5:00",
+      "holiday": "無",
+      "access": {
+        "line": "地下鉄日比谷線",
+        "station": "六本木駅",
+        "station_exit": "3番出口",
+        "walk": "3",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "六本木駅3番出口から東京タワー方面へ徒歩3分！ 古き良きメキシカンな空間でダーツとスポーツ観戦！",
+        "pr_long": "■スポーツ観戦情報■<BR>◇プロ野球交流戦◇<BR>人気試合を放映中！！<BR>◇ユーロ 2016◇<BR>6/30 27:45～ ウェールズ ×ベルギー<BR>7/1 27:45～ ドイツ×イタリア<BR> その他地上波放送は全試合放映<BR>※一部営業時間を延長して放映します<BR>メキシカン＆リゾート感あふれる店内は ダーツライブⅡ2台完備！<BR>100インチのプロジェクターでのスポーツ観戦も大盛り上がり！<BR>豊富なテキーラや世界各国のお酒、インポートビール、<BR>専属バーテンダーがつくるカクテルも充実。<BR>最大80名様【完全貸切フロア有り】"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2132",
+        "areaname_s": "六本木（麻布方面）",
+        "category_code_l": [
+          "RSFST10000",
+          "RSFST10000"
+        ],
+        "category_name_l": [
+          "ダイニングバー・バー・ビアホール",
+          "ダイニングバー・バー・ビアホール"
+        ],
+        "category_code_s": [
+          "RSFST10011",
+          "RSFST10005"
+        ],
+        "category_name_s": [
+          "ダーツバー・ゴルフバー",
+          "バー"
+        ]
+      },
+      "budget": "1500",
+      "party": "3000",
+      "lunch": {},
+      "credit_card": "VISA,MasterCard,ダイナースクラブ,アメリカン・エキスプレス,JCB",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "6"
+      },
+      "id": "g420214",
+      "update_date": "2016-06-29 01:24:33",
+      "name": "東京ドームシティ 風と緑のビアガーデン ",
+      "name_kana": "トウキョウドームシティカゼトミドリノビアガーデン",
+      "latitude": "35.701447",
+      "longitude": "139.756556",
+      "category": "ビアガーデン",
+      "url": "http://r.gnavi.co.jp/k3eb2rsc0000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/g420214/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": {},
+        "mobile": {}
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/k3eb2rsc0000/t_000p.jpg",
+        "shop_image2": {},
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=g420214&q=6"
+      },
+      "address": "〒112-0004 東京都文京区後楽1-3-6",
+      "tel": "050-5783-1098",
+      "tel_sub": "03-3816-6070",
+      "fax": "03-3816-6070",
+      "opentime": "月～金 15:00～22:00<BR>土・日・祝 9:30～22:30(  ※曜日・季節によって変則的ですので、ホームページやお問い合わせをしてご確認ください。)",
+      "holiday": "不定休日あり<BR>※※イベントなどにより変更の場合がございます。",
+      "access": {
+        "line": "都営三田線",
+        "station": "水道橋駅",
+        "station_exit": "A3番出口",
+        "walk": "4",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "【東京ドーム！風と緑のビアガーデン！】 今年もやります！ 絶対お得！3900円の食べ放題＆飲み放題プラン！ キンキン、冷え冷えの生ビールと美味しいおつまみ！",
+        "pr_long": "お得なのは「食べ飲み放題！」<BR>3900円というリーズナブルな価格でお食事を召し上がり、さらには！お酒も飲み放題。<BR>正直かなりお得です！<BR>お値段気にせず、いっぱい食べていっぱい飲んでください！<BR>東京ドーム22ゲートの目の前にある『風と緑のビアガーデン』☆<BR>野球好きも、ビール好きも、ワイワイしたい人もぜひ！！<BR>美味しいおつまみとキンキンに冷えたできたての工場直送【一番搾り樽生】をどうぞ！<BR>生ビールの旨さもシチュエーションも、文句なしのビアガーデンと言えば、もうすっかりお馴染みのここ「風と緑のビアガーデン」。<BR>キンキンに冷えた一番搾り樽生で気分は最高！<BR>スポーツ中継をモニター観戦しながら、みんなで乾杯しよう！<BR>飲み放題プランもおすすめですよ♪<BR>お仕事帰りに、お仲間でワイワイと、旨い生ビールで楽しい時間を過ごしませんか☆"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2189",
+        "areaname_s": "水道橋",
+        "category_code_l": [
+          "RSFST21000",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_l": [
+          "お酒",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_code_s": [
+          "RSFST21004",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_s": [
+          "ビール",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ]
+      },
+      "budget": "4000",
+      "party": {},
+      "lunch": "2000",
+      "credit_card": {},
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "0",
+        "pc_coupon": "0"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "7"
+      },
+      "id": "gaxx405",
+      "update_date": "2016-07-02 01:51:36",
+      "name": "アニバーサリークルーズ 日本橋",
+      "name_kana": "アニーバサリークルーズ ニホンバシ",
+      "latitude": "35.680486",
+      "longitude": "139.777853",
+      "category": "貸切懇親会宴会クルーズ",
+      "url": "http://r.gnavi.co.jp/esp8f6ee0000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gaxx405/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/esp8f6ee0000/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/gaxx405/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/esp8f6ee0000/t_02p0.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/esp8f6ee0000/t_02p1.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gaxx405&q=6"
+      },
+      "address": "〒103-0027 東京都中央区日本橋1-9",
+      "tel": "050-5789-8179",
+      "tel_sub": "03-6402-2260",
+      "fax": "03-6402-2263",
+      "opentime": " 24時間営業",
+      "holiday": "年中無休",
+      "access": {
+        "line": "地下鉄",
+        "station": "日本橋駅",
+        "station_exit": "B12番出口",
+        "walk": "3",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "東京貸切クルージングはアニバーサリークルーズ!! 結婚式2次会や会社懇親会、2016年納涼会にも！ 東京湾での貸切クルーズで\"最高のひと時゛になる事間違いなし★",
+        "pr_long": "お客様の目的・予算・人数に合わせて各種サイズ貸切クルーザーを手配【貸切】<BR>お食事も送迎も多彩な演出もとっておきのサプライズも全て<BR>アニバーサリークルーズにお任せ下さい♪<BR><BR>日常を忘れさせるクルーザーで乗った瞬間バカンス空間！<BR>一生忘れられない思い出が東京湾貸切クルーズで作れるとしたらそれはまさに記念日★<BR>多くの方の夢と理想を乗せて私達は24時間年中無休貸切にて船出しています。<BR>◆7種70隻・2～600名様迄貸切可<BR>◆イタリアン・BBQ・焼肉・焼鳥・寿司・鉄板焼・ワイン・イタリアン等料理が充実<BR>◆東京湾での完全貸切クルーズ<BR>◆2016年の納涼会や歓送迎会にもご使用下さい。<BR>社内行事（懇親会・親睦会・打ち上げ・暑気払い・納涼会・歓送迎会・祝賀会・創立記念日・忘年会）<BR>各種イベント・パーティー・誕生会・婚礼2次会・還暦祝い・BBQ・ウェディング"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2143",
+        "areaname_s": "日本橋",
+        "category_code_l": [
+          "RSFST19000",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_l": [
+          "宴会・カラオケ・エンターテイメント",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_code_s": [
+          "RSFST19010",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_s": [
+          "クルージング",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ]
+      },
+      "budget": "7000",
+      "party": "7000",
+      "lunch": "7000",
+      "credit_card": "VISA,MasterCard,UC,ダイナースクラブ,アメリカン・エキスプレス,JCB,アプラス,セゾン,J-DEBIT,MUFG,銀聯",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "8"
+      },
+      "id": "gaxx406",
+      "update_date": "2016-07-02 01:53:55",
+      "name": "アニバーサリークルーズ 浅草",
+      "name_kana": "アニバーサリークルーズ アサクサ",
+      "latitude": "35.707542",
+      "longitude": "139.801719",
+      "category": "貸切懇親会宴会クルーズ",
+      "url": "http://r.gnavi.co.jp/kkye6ve00000/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/gaxx406/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/kkye6ve00000/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/gaxx406/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/kkye6ve00000/t_02lf.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/kkye6ve00000/t_02lg.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=gaxx406&q=6"
+      },
+      "address": "〒111-0033 東京都台東区花川戸1-1-1",
+      "tel": "050-5789-8180",
+      "tel_sub": "03-6402-2260",
+      "fax": "03-6402-2263",
+      "opentime": " 24時間営業",
+      "holiday": "無",
+      "access": {
+        "line": "地下鉄銀座線",
+        "station": "浅草駅",
+        "station_exit": {},
+        "walk": "1",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "東京貸切クルージングはアニバーサリークルーズ!! 結婚式2次会や会社懇親会、2016年の納涼会にも！ 東京湾での貸切クルーズで\"最高のひと時゛になる事間違いなし★",
+        "pr_long": "お客様の目的・予算・人数に合わせて各種サイズ貸切クルーザーを手配【貸切】<BR>お食事も送迎も多彩な演出もとっておきのサプライズも全て<BR>アニバーサリークルーズにお任せ下さい♪<BR><BR>日常を忘れさせるクルーザーで乗った瞬間バカンス空間！<BR>一生忘れられない思い出が東京湾貸切クルーズで作れるとしたらそれはまさに記念日★<BR>多くの方の夢と理想を乗せて私達は24時間年中無休貸切にて船出しています。<BR>◆7種70隻・2～600名様迄貸切可<BR>◆イタリアン・BBQ・焼肉・焼鳥・寿司・鉄板焼・ワイン・イタリアン等料理が充実<BR>◆東京湾での完全貸切クルーズ<BR>◆納涼会や歓送迎会も貸切クルーズで是非ご検討下さい。<BR>社内行事（懇親会・親睦会・打ち上げ・暑気払い・納涼会・歓送迎会・祝賀会・創立記念日・忘年会）<BR>各種イベント・パーティー・誕生会・婚礼2次会・還暦祝い・BBQ・ウェディング"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2205",
+        "areaname_s": "浅草",
+        "category_code_l": [
+          "RSFST19000",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_l": [
+          "宴会・カラオケ・エンターテイメント",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_code_s": [
+          "RSFST19010",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_s": [
+          "クルージング",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ]
+      },
+      "budget": "7000",
+      "party": "7000",
+      "lunch": "7000",
+      "credit_card": "VISA,MasterCard,UC,ダイナースクラブ,アメリカン・エキスプレス,JCB,アプラス,セゾン,J-DEBIT,MUFG,銀聯",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    },
+    {
+      "@attributes": {
+        "order": "9"
+      },
+      "id": "e316600",
+      "update_date": "2016-07-01 02:28:05",
+      "name": "ドロップキック ",
+      "name_kana": "ドロップキック",
+      "latitude": "35.691456",
+      "longitude": "139.705342",
+      "category": "プロレス＆スポーツバー",
+      "url": "http://r.gnavi.co.jp/e316600/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "url_mobile": "http://mobile.gnavi.co.jp/shop/e316600/?ak=ILhtqyjjGqXPqgl%2BEnPG8gkeBrGYbaCIM6U9LdCZ2hU%3D",
+      "coupon_url": {
+        "pc": "http://r.gnavi.co.jp/e316600/coupon/",
+        "mobile": "http://mobile.gnavi.co.jp/shop/e316600/coupon"
+      },
+      "image_url": {
+        "shop_image1": "http://uds.gnst.jp/rest/img/ekvg6c100000/t_0093.jpg",
+        "shop_image2": "http://uds.gnst.jp/rest/img/ekvg6c100000/t_0094.jpg",
+        "qrcode": "http://r.gnst.jp/tool/qr/?id=e316600&q=6"
+      },
+      "address": "〒160-0021 東京都新宿区歌舞伎町1-14-6 第21東京ビル8F",
+      "tel": "03-6278-9230",
+      "tel_sub": {},
+      "fax": {},
+      "opentime": " 18:00～24:00(※一部イベントは時間外の営業も行います)",
+      "holiday": "不定休日あり<BR>※月に一回ほど清掃のための定休日をいただきます。",
+      "access": {
+        "line": "ＪＲ",
+        "station": "新宿駅",
+        "station_exit": "東口",
+        "walk": "2",
+        "note": {}
+      },
+      "parking_lots": {},
+      "pr": {
+        "pr_short": "歌舞伎町のスポーツBar「ドロップキック」豊富なドリンクメニューを取り揃えております。",
+        "pr_long": "ＤＤＴプロレスがプロデュースする<BR>プロレス＆スポーツＢａｒ「ドロップキック」<BR>カウンター席を含めた最大27席のフロアに大画面のスクリーンを設置し、<BR>プロレス＆格闘技を中心として各種スポーツ中継を放送します。<BR>プロレスファンの方はもちろんスポーツファンの方、お酒が好きな方、お喋りが好きな方、<BR>みなさんに楽しんでいただける店を目指します。<BR>ぜひお立ち寄り下さい。"
+      },
+      "code": {
+        "areacode": "AREA110",
+        "areaname": "関東",
+        "prefcode": "PREF13",
+        "prefname": "東京都",
+        "areacode_s": "AREAS2115",
+        "areaname_s": "新宿東口・歌舞伎町",
+        "category_code_l": [
+          "RSFST10000",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_l": [
+          "ダイニングバー・バー・ビアホール",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_code_s": [
+          "RSFST10005",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ],
+        "category_name_s": [
+          "バー",
+          {
+            "@attributes": {
+              "order": "1"
+            }
+          }
+        ]
+      },
+      "budget": "2000",
+      "party": "2000",
+      "lunch": {},
+      "credit_card": "VISA,MasterCard,UC",
+      "e_money": {},
+      "flags": {
+        "mobile_site": "1",
+        "mobile_coupon": "1",
+        "pc_coupon": "1"
+      }
+    }
+  ]
+}
