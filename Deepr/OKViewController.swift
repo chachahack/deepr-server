@@ -16,6 +16,26 @@ class OKViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let okAlertController: UIAlertController = UIAlertController(
+            title: "Alert",
+            message: "Please show this screen and talk.",
+            preferredStyle: .Alert
+        )
+        let okAction: UIAlertAction = UIAlertAction(
+            title: "Default",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                print("Default")
+        })
+        okAlertController.addAction(okAction)
+        
+        self.navigationController?.pushViewController(okAlertController, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
