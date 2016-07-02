@@ -137,6 +137,13 @@ export default class Eat extends React.Component {
           </Card>
         )
       });
+    }
+
+    let map_message = 'オススメのお店の場所はどこの辺りですか？';
+    let where_message = 'そのお店はこの中のどれですか？';
+    if (this.state.isEnglish) {
+      map_message = '';
+      where_message = '';
 
       marker_list = rest.map((item, i) => {
         return (
@@ -146,14 +153,6 @@ export default class Eat extends React.Component {
                   key={i} />
         )
       })
-    } else {
-    }
-
-    let map_message = 'オススメのお店の場所はどこの辺りですか？';
-    let where_message = 'そのお店はこの中のどれですか？';
-    if (this.state.isEnglish) {
-      map_message = '';
-      where_message = '';
     }
 
     var profile = {
@@ -194,6 +193,7 @@ export default class Eat extends React.Component {
                zoom={17}
                onDragend={this.onMapDragend.bind(this)}
                initialCenter={this.state.latlng}>
+               {marker_list}
           </Map>
         </div>
         <div className='where_message'>
