@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.title = "Deepr!"
         // Do any additional setup after loading the view, typically from a nib.
     }
 

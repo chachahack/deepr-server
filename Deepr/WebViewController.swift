@@ -15,6 +15,7 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.title = "Deepr!"
         
         let requestURL = NSURL(string: "https://ikuwow.github.io")
         let req = NSURLRequest(URL: requestURL!)
