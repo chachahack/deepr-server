@@ -35,7 +35,6 @@ const Master = React.createClass({
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={{width: '100%'}}>
-          <div id='logo'>Deepr!</div>
           <div style={styles.content}>
             {this.props.children}
           </div>
