@@ -9,15 +9,30 @@
   </head>
   <body>
     <h1></h1>
-
-
+    <div class="msg"></div>
+    <div class="map"></div>
+    <div class="">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
+    // ajaxで'/fun'を取りに行く
+    $.ajax({
+      type: 'get',
+      url: './fun?name=hoge'
+    }).done(function(data) {
+      console.log(data);
+      dfd.resolve();
+    });
+
+    // 変数にとりあえず固定値突っ込む
+    $(function(){
+      var user = 'Tom';
+      var name = '';
 
 
-
-
+      $('h1').html('title_hoge');
+      $('.msg').html('こんにちは、'+name+'です。');
+    });
     </script>
   </body>
 </html>
