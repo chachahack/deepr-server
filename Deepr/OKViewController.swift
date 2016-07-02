@@ -1,5 +1,5 @@
 //
-//  WebViewController.swift
+//  OKViewController.swift
 //  Deepr
 //
 //  Created by DegawaIkuo on 7/2/16.
@@ -8,17 +8,13 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class OKViewController: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        let requestURL = NSURL(string: "https://ikuwow.github.io")
-        let req = NSURLRequest(URL: requestURL!)
-        webView.loadRequest(req)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,11 +24,6 @@ class WebViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     

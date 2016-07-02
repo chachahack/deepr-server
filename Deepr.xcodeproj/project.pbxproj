@@ -10,6 +10,7 @@
 		21C96D5E54501DBC7E6D9E53 /* Pods_DeeprUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE2665B82D3AD1E7D0410EC /* Pods_DeeprUITests.framework */; };
 		28BC5231DE5C5AEBDA516BB7 /* Pods_Deepr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D5EB1B3E7C9630004CF142 /* Pods_Deepr.framework */; };
 		7D174AD21D27A537006CAE17 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D174AD11D27A537006CAE17 /* WebViewController.swift */; };
+		7D6A16E31D28071200EBA973 /* OKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A16E21D28071200EBA973 /* OKViewController.swift */; };
 		7DB94C961D278645003B076E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB94C951D278645003B076E /* AppDelegate.swift */; };
 		7DB94C981D278645003B076E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB94C971D278645003B076E /* ViewController.swift */; };
 		7DB94C9B1D278645003B076E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB94C991D278645003B076E /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		6BE2665B82D3AD1E7D0410EC /* Pods_DeeprUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeeprUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F421BA4B627A8B979A29077 /* Pods-DeeprUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeeprUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeeprUITests/Pods-DeeprUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D174AD11D27A537006CAE17 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7D6A16E21D28071200EBA973 /* OKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OKViewController.swift; sourceTree = "<group>"; };
 		7DB94C921D278645003B076E /* Deepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB94C951D278645003B076E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB94C971D278645003B076E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB94C951D278645003B076E /* AppDelegate.swift */,
+				7D6A16E21D28071200EBA973 /* OKViewController.swift */,
 				7DB94C971D278645003B076E /* ViewController.swift */,
 				7DB94C991D278645003B076E /* Main.storyboard */,
 				7D174AD11D27A537006CAE17 /* WebViewController.swift */,
@@ -437,6 +440,7 @@
 				7DB94C981D278645003B076E /* ViewController.swift in Sources */,
 				7DB94C9E1D278645003B076E /* Deepr.xcdatamodeld in Sources */,
 				7DB94C961D278645003B076E /* AppDelegate.swift in Sources */,
+				7D6A16E31D28071200EBA973 /* OKViewController.swift in Sources */,
 				7D174AD21D27A537006CAE17 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
