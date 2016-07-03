@@ -77,7 +77,7 @@ const parse_mood = (value) => {
     mood = mood + 'ロマンチックな'
   }
   if ((value & 0x08) == 0x08) {
-    mood = mood + '家族向けな'
+    mood = mood + '家族で行ける'
   }
   if ((value & 0x10) == 0x10) {
     mood = mood + '食べ放題な'
@@ -88,6 +88,13 @@ const parse_mood = (value) => {
   return mood;
 }
 
+const seen_table = {
+  'lunch': 'ランチのお店',
+  'dinner': 'ディナーレストラン',
+  'coffee': 'カフェ',
+  'drink': 'お酒を飲む場所'
+};
+
 export default class Eat extends React.Component {
   constructor(props) {
     super(props);
@@ -97,6 +104,7 @@ export default class Eat extends React.Component {
       isEnglish: false,
       latlng: {lat: this.props.location.query.lat, lng:this.props.location.query.lng},
       freeword: this.props.location.query.freeword,
+      seen: this.props.location.query.seen,
       country: this.props.location.query.country,
       mood: this.props.location.query.mood
     }
@@ -245,21 +253,21 @@ export default class Eat extends React.Component {
 
     const country = parse_country(this.state.country);
     const mood = parse_mood(this.state.mood);
+    const seen = seen_table[this.state.seen];
 
     var profile = {
       "user_name": "Tom",
       "age": "28",
       "day": "2",
       "from": "カリフォルニア",
-      "hobby": ['ダーツ', 'マラソン'],
-      "search": ['家族で行ける', '静かな', '日本食', 'ディナーレストラン']
+      "hobby": ['ダーツ', 'マラソン']
     }
 
     const message = (
       <div className="prof">初めまして！僕の名前は<span className="bold">{profile['user_name']}</span>といいます。
       <span className="bold">{profile['age']}歳</span>で、<span className="bold">{profile['day']}</span>日前に<span className="bold">{profile['from']}</span>から日本に来ました。
       趣味は<span className="bold">{profile['hobby'][0]}</span>と<span className="bold">{profile['hobby'][1]}</span>です。<br />
-      僕は今<span className="bold">{mood + country}ディナー</span>レストランを探しています。
+      僕は今<span className="bold">{mood + country + seen}</span>を探しています。
       もしオススメのお店を知っていたら、ぜひ教えてください！
     </div>)
 
