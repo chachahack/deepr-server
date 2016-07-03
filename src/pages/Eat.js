@@ -215,8 +215,8 @@ export default class Eat extends React.Component {
         return (
           <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
             <CardHeader title= {item.name}
-                        />
-            <CardText>
+                        style= {{padding: 5}}/>
+            <CardText style= {{padding: 0}}>
               <div className="spot_custom_image">
                 {img}
               </div>
