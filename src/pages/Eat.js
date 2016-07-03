@@ -172,7 +172,8 @@ export default class Eat extends React.Component {
   render() {
 
     let restran_list = ""
-    let marker_list = ""
+    let marker_list = []
+    let now_marker = ""
 
     if (this.state.data == null) {
       return null;
@@ -244,13 +245,17 @@ export default class Eat extends React.Component {
 
       marker_list = rest.map((item, i) => {
         return (
-          <Marker onClick={this.onMarkerClick}
+          <Marker onClick={this.onMarkerClick.bind(this)}
                   name={item.name}
                   position={{lat: item.latitude, lng:item.longitude}}
                   key={i} />
         )
       })
     }
+      marker_list.push(<Marker onClick={this.onMarkerClick.bind(this)}
+              name="現在地"
+              position={{lat: 35.660617, lng:139.743686}}
+              key={'now'} />);
 
     const country = parse_country(this.state.country);
     const mood = parse_mood(this.state.mood);
