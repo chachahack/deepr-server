@@ -93,6 +93,7 @@ a {
 }
 
 .container_ver {
+  overflow: hidden;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
