@@ -196,6 +196,7 @@ export default class Eat extends React.Component {
           if (message.length > message_limit) {
             message = message.substring(0, message_limit) + '...';
           }
+          message = message.replace(/<BR>/g, '');
           pr = <div className='spot_item_pr'>{message}</div>
         }
         if (typeof(item.budget) !== 'object') {
