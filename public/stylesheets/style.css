@@ -102,6 +102,7 @@ a {
 
 .spot_custom_opentime {
   height: 20px;
+  overflow:hidden;
 }
 
 .spot_custom_budget {
