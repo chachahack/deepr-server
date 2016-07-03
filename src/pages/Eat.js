@@ -122,19 +122,38 @@ export default class Eat extends React.Component {
   }
 
   onTranslationButtonClick(event) {
-    this.setState({
-      data: {rest: [this.state.data.rest[event]]},
-      isEnglish: !this.state.isEnglish
-    });
-    if (this.state.isEnglish) {
+    let select = this.state.selected
+    if (this.state.data.rest != undefined) {
+      select = this.state.data.rest[event]
+    }
+    if (select == undefined) {
+      select = this.state.data.rest;
+    }
+
+    const isEnglish = this.state.isEnglish;
+    if (isEnglish) {
       jquery.ajax({
         type: 'get',
         url: './eat?freeword=' + this.state.freeword + '&lat=' + this.state.latlng.lat + '&lng=' + this.state.latlng.lng
       }).done((data) => {
         this.setState({
-          data: data
+          selected: select,
+          data: data,
+          isEnglish: !isEnglish
         });
       });
+    } else {
+      jquery.ajax({
+        type: 'get',
+        url: './eat_g?id=' + select.id
+      }).done((data) => {
+        this.setState({
+          selected: select,
+          data: data,
+          isEnglish: !isEnglish
+        });
+      });
+
     }
   }
 
@@ -165,55 +184,104 @@ export default class Eat extends React.Component {
 
     let restran_list = ""
     let marker_list = ""
+    let rest = ''
 
     if (this.state.data == null) {
       return null;
     }
 
-    const rest = this.state.data.rest;
-    if (rest != null) {
-      restran_list = rest.map((item, i) => {
-        let img = ( <img className='spot_item_image' src='images/no_image.svg' /> )
-        let pr = '';
-        let opentime = "";
-        let budget = "";
-        let credit_card = "";
-        if (typeof(item.image_url.shop_image1) !== 'object') {
-          img = (
-            <img className='spot_item_image' src={item.image_url.shop_image1} />
-          )
-        } else if (typeof(item.image_url.shop_image2) !== 'object') {
-          img = (
-            <img className='spot_item_image' src={item.image_url.shop_image2} />
-          )
+    if (!this.state.isEnglish) {
+      rest = this.state.data.rest;
+      if (rest != null) {
+        if (!Array.isArray(rest)) {
+          rest = [rest];
         }
-        if (typeof(item.opentime) !== 'object') {
-          opentime = <div className='spot_item_opentime'>{item.opentime}</div>
-        }
-        if (typeof(item.pr.pr_long) !== 'object') {
-          let message = item.pr.pr_long;
-          const message_limit = 100
-          if (message.length > message_limit) {
-            message = message.substring(0, message_limit) + '...';
+        restran_list = rest.map((item, i) => {
+          let img = ( <img className='spot_item_image' src='images/no_image.svg' /> )
+          let pr = <div></div>;
+          let opentime = "";
+          let budget = "";
+          let credit_card = "";
+          let name = '';
+          if (typeof(item.image_url.shop_image1) !== 'object') {
+            img = (
+              <img className='spot_item_image' src={item.image_url.shop_image1} onClick={this.onTranslationButtonClick.bind(this, i)}  />
+            )
+          } else if (typeof(item.image_url.shop_image2) !== 'object') {
+            img = (
+              <img className='spot_item_image' src={item.image_url.shop_image2}  onClick={this.onTranslationButtonClick.bind(this, i)} />
+            )
           }
-          pr = <div className='spot_item_pr'>{message}</div>
-        }
-        if (typeof(item.budget) !== 'object') {
-          budget = <div className='spot_item_budget'>{lang_en[this.state.isEnglish].budget + item.budget}円</div>
-        }
+          if (typeof(item.opentime) !== 'object') {
+            opentime = <div className='spot_item_opentime'>{item.opentime}</div>
+          }
+          if (item.pr != null) {
+            if (typeof(item['pr']['pr_long']) !== 'object') {
+              let message = item.pr.pr_long;
+              const message_limit = 100
+              if (message.length > message_limit) {
+                message = message.substring(0, message_limit) + '...';
+              }
+              pr = <div className='spot_item_pr'>{message}</div>
+            }
+          }
+          if (typeof(item.budget) !== 'object') {
+            budget = <div className='spot_item_budget'>{lang_en[this.state.isEnglish].budget + item.budget}円</div>
+          }
 
-        return (
-          <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
-            <CardHeader title={item.name}
-                        subtitle={pr}/>
-            <CardText>
-              {img}
-              {opentime}
-              {budget}
-            </CardText>
-          </Card>
-        )
-      });
+          if (typeof(item.name) !== 'object') {
+            name = item.name;
+          }
+
+          return (
+            <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
+              <CardHeader title={name}
+                          subtitle={pr}/>
+              <CardText>
+                {img}
+                {opentime}
+                {budget}
+              </CardText>
+            </Card>
+          )
+        });
+      }
+    } else {
+      rest = this.state.data.rest;
+      let img = ( <img className='spot_item_image' src='images/no_image.svg' /> )
+      let opentime = this.state.selected.opentime;
+
+      let budget = "";
+      if (typeof(this.state.selected.budget) !== 'object') {
+        budget = <div className='spot_item_budget'>\ {this.state.selected.budget}</div>
+      }
+      let credit_card = "";
+      if (typeof(this.state.selected.credit_card) !== 'object') {
+        credit_card = this.state.selected.credit_card;
+      }
+      let name = this.state.selected.name;
+      let kana = "";
+      if (rest !== undefined) {
+        opentime = rest.business_hour;
+        budget = rest.budget;
+        credit_card = rest.credit_card;
+        name = rest.name.name;
+        kana = rest.name.name_kana;
+      } else {
+        rest = [this.state.selected];
+      }
+      if (!Array.isArray(rest)) {
+        rest = [this.state.data.rest];
+      }
+      restran_list = <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, 0)}>
+          <CardHeader title={name}
+                      subtitle={kana}/>
+          <CardText>
+            {img}
+            {opentime}
+            {budget}
+          </CardText>
+        </Card>
     }
 
     let map_message = 'オススメのお店の場所はどこの辺りですか？';

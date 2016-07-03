@@ -15,4 +15,10 @@ router.get('/eat', (req, res, next) => {
     .catch(data => res.json(data))
 });
 
+router.get('/eat_g', (req, res, next) => {
+  gnavi.g_search(req.query['id'])
+    .then(data => res.json(data))
+    .catch(data => res.json(data))
+});
+
 module.exports = router;
