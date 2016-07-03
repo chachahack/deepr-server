@@ -6,15 +6,9 @@
 
 # 実行
 
+    webpack
     npm run start
 
-# テスト
+# 依存ライブラリ
 
-    npm run test
-
-
-# EndPoint
-- /eat 食べる
-- /fun 遊ぶ
-- /stay 泊まる
-- /emergency 緊急
+  - package.json
