@@ -182,18 +182,18 @@ export default class Eat extends React.Component {
     const rest = this.state.data.rest;
     if (rest != null) {
       restran_list = rest.map((item, i) => {
-        let img = ( <img className='spot_item_image' src='images/no_image.svg' /> )
+        let img = ( <img className='spot_item_image' width='100px' height='100px' src='images/no_image.svg' /> )
         let pr = '';
         let opentime = "";
         let budget = "";
         let credit_card = "";
         if (typeof(item.image_url.shop_image1) !== 'object') {
           img = (
-            <img className='spot_item_image' src={item.image_url.shop_image1} />
+            <img className='spot_item_image' width='100px' height='100px' src={item.image_url.shop_image1} />
           )
         } else if (typeof(item.image_url.shop_image2) !== 'object') {
           img = (
-            <img className='spot_item_image' src={item.image_url.shop_image2} />
+            <img className='spot_item_image' width='100px' height='100px' src={item.image_url.shop_image2} />
           )
         }
         if (typeof(item.opentime) !== 'object') {
@@ -209,28 +209,27 @@ export default class Eat extends React.Component {
           pr = <div className='spot_item_pr'>{message}</div>
         }
         if (typeof(item.budget) !== 'object') {
-          budget = <div className='spot_item_budget'>{lang_en[this.state.isEnglish].budget + item.budget}円</div>
+          budget = item.budget + '円';
         }
 
         return (
           <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
             <CardHeader title= {item.name}
                         style= {{padding: 5}}/>
-            <CardText style= {{padding: 0}}>
-              <div className="spot_custom_image">
-                {img}
-              </div>
-              <div className="spot_custom_right">
-                <div className="spot_custom_pr">
-                  {pr}
+            <CardText style= {{padding: 0, display: 'flex', flexDirection: 'row',  }}>
+
+
+              <div className="container_hor">
+                <div className="spot_item_image">
+                  {img}
                 </div>
-                <div className="spot_custom_opentime">
-                  {opentime}
-                </div>
-                <div className="spot_custom_budget">
-                  {budget}
+
+                <div className="container_ver">
+                  <div className="spot_custom_opentime">{opentime}</div>
+                  <div className="spot_custom_budget">{budget}</div>
                 </div>
               </div>
+
             </CardText>
           </Card>
         )

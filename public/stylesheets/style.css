@@ -86,8 +86,25 @@ a {
   border: 1px solid #FF00FF;
 }
 
-.spot_custom_right {
-  display: inline-block;
+.container_hor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container_ver {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.spot_custom_opentime {
+  height: 20px;
+}
+
+.spot_custom_budget {
+  height: 20px;
 }
 
 .bold {
