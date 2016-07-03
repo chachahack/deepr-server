@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 const styles = {
   icon : {
-    'height': 70,
-    'width': 70,
-    'borderRadius': 70,
+    'height': 50,
+    'width': 50,
+    'borderRadius': 50,
     'display': 'block',
     'marginLeft': 'auto',
     'marginRight': 'auto',

@@ -34,25 +34,23 @@ a {
 .profile_top {
     display: flex;
     flex-direction: row;
-    align-items:center;
-    width: 238px;
+    align-items: center;
+    width: 119px;
     margin: 0 auto;
-}
-
-.profile_name {
-  display: inline-block;
-  margin-left: 10px;
 }
 
 .profile_name {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 60%;
 }
 
 .profile_message {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
-  padding: 20px 10px 0px 10px;
+  padding: 20px 25px 0px 25px;
 }
 
 .map {
@@ -75,7 +73,7 @@ a {
 }
 
 .spot_item {
-  width: 350px;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -103,11 +101,16 @@ a {
 }
 
 .map_message, .where_message {
-  font-size: 88%;
-  padding-top: 20px;
-  padding-left: 10px;
+  font-size: 82%;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .map {
-  padding-top: 5px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.where_message {
+  padding-bottom: 10px;
 }
