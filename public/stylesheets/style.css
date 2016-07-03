@@ -35,12 +35,12 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 119px;
+    width: 150px;
     margin: 0 auto;
 }
 
 .profile_name {
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
   text-align: center;
   display: inline-block;
   margin-left: 10px;
