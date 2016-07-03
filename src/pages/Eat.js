@@ -19,11 +19,73 @@ const styles = {
 
 const lang_en = {
   true: {
-      budget: 'Budget:'
+      budget: 'Budget:',
+      japan: 'japan',
+      italian: 'italian',
+      french: 'french',
+      chinese: 'chinese',
+      quite: 'quite',
+      full_of_life: 'full_of_life',
+      romantic: 'romantic',
+      family: 'family',
+      all_you_can_eat: 'all_you_can_eat',
+      spicy: 'spicy'
   },
   false: {
-      budget: '平均予算:'
+      budget: '平均予算:',
+      japan: '日本食',        // 1
+      italian: 'イタリアン',  // 2
+      french: 'フランス料理', // 4
+      chinese: '中華料理',    // 8
+      quite: '静かな',                // 1
+      full_of_life: '賑やかな',       // 2
+      romantic: 'ロマンチックな',     // 4
+      family: '家族向けな',           // 8
+      all_you_can_eat: '食べ放題な',  // 16
+      spicy: '辛い'
   }
+}
+
+const parse_country = (value) => {
+  let country = '';
+  value = parseInt(value, 10);
+  if ((value & 0x01) == 0x01) {
+    country = country + '日本食';
+  }
+  if ((value & 0x02) == 0x02) {
+    country = country + 'イタリアン';
+  }
+  if ((value & 0x04) == 0x04) {
+    country = country + 'フランス料理';
+  }
+  if ((value & 0x08) == 0x08) {
+    country = country + '中華料理';
+  }
+  return country;
+}
+
+const parse_mood = (value) => {
+  let mood = '';
+  value = parseInt(value, 10);
+  if ((value & 0x01) == 0x01) {
+    mood = mood + '静かな'
+  }
+  if ((value & 0x02) == 0x02) {
+    mood = mood + '賑やかな'
+  }
+  if ((value & 0x04) == 0x04) {
+    mood = mood + 'ロマンチックな'
+  }
+  if ((value & 0x08) == 0x08) {
+    mood = mood + '家族向けな'
+  }
+  if ((value & 0x10) == 0x10) {
+    mood = mood + '食べ放題な'
+  }
+  if ((value & 0x20) == 0x20) {
+    mood = mood + '辛い'
+  }
+  return mood;
 }
 
 export default class Eat extends React.Component {
@@ -34,7 +96,9 @@ export default class Eat extends React.Component {
       data: {},
       isEnglish: false,
       latlng: {lat: this.props.location.query.lat, lng:this.props.location.query.lng},
-      freeword: this.props.location.query.freeword
+      freeword: this.props.location.query.freeword,
+      country: this.props.location.query.country,
+      mood: this.props.location.query.mood
     }
   }
 
@@ -168,6 +232,9 @@ export default class Eat extends React.Component {
       })
     }
 
+    const country = parse_country(this.state.country);
+    const mood = parse_mood(this.state.mood);
+
     var profile = {
       "user_name": "Tom",
       "age": "28歳",
@@ -181,10 +248,7 @@ export default class Eat extends React.Component {
       <div className="prof">初めまして！僕の名前は<span id="user_name">{profile['user_name']}</span>といいます。
       <span id="age">{profile['age']}歳</span>で、<span id="day">{profile['day']}</span>日前に<span id="from">{profile['from']}</span>から日本に来ました。
       趣味は<span id="hobby1">{profile['hobby'][0]}</span>と<span id="hobby2">{profile['hobby'][1]}</span>です。
-      僕は今<span id="search1">{profile['search'][0]}</span>
-            <span id="search2">{profile['search'][1]}</span>
-            <span id="search3">{profile['search'][2]}</span>
-            <span id="search4">{profile['search'][3]}</span>を探しています。
+      僕は今、<span id="search4">{mood + country}</span>を探しています。
       もしオススメのお店を知っていたら、ぜひ教えてください！
     </div>)
 
@@ -205,6 +269,7 @@ export default class Eat extends React.Component {
                google={window.google}
                zoom={17}
                onDragend={this.onMapDragend.bind(this)}
+               center={this.state.latlng}
                initialCenter={this.state.latlng}>
                {marker_list}
           </Map>
