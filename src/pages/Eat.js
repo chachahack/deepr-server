@@ -204,14 +204,13 @@ export default class Eat extends React.Component {
 
         return (
           <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
+            <CardHeader title= {item.name}
+                        />
             <CardText>
               <div className="spot_custom_image">
                 {img}
               </div>
               <div className="spot_custom_right">
-                <div className="spot_custom_name">
-                  {item.name}
-                </div>
                 <div className="spot_custom_pr">
                   {pr}
                 </div>
