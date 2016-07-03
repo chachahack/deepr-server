@@ -77,7 +77,7 @@ const parse_mood = (value) => {
     mood = mood + 'ロマンチックな'
   }
   if ((value & 0x08) == 0x08) {
-    mood = mood + '家族向けな'
+    mood = mood + '家族で行ける'
   }
   if ((value & 0x10) == 0x10) {
     mood = mood + '食べ放題な'
@@ -253,7 +253,7 @@ export default class Eat extends React.Component {
 
     const country = parse_country(this.state.country);
     const mood = parse_mood(this.state.mood);
-    const seen = this.state.seen;
+    const seen = seen_table[this.state.seen];
 
     var profile = {
       "user_name": "Tom",
@@ -267,7 +267,7 @@ export default class Eat extends React.Component {
       <div className="prof">初めまして！僕の名前は<span className="bold">{profile['user_name']}</span>といいます。
       <span className="bold">{profile['age']}歳</span>で、<span className="bold">{profile['day']}</span>日前に<span className="bold">{profile['from']}</span>から日本に来ました。
       趣味は<span className="bold">{profile['hobby'][0]}</span>と<span className="bold">{profile['hobby'][1]}</span>です。<br />
-      僕は今<span className="bold">{mood + country + seen}</span>レストランを探しています。
+      僕は今<span className="bold">{mood + country + seen}</span>を探しています。
       もしオススメのお店を知っていたら、ぜひ教えてください！
     </div>)
 
