@@ -254,7 +254,7 @@ export default class Eat extends React.Component {
     }
       marker_list.push(<Marker onClick={this.onMarkerClick.bind(this)}
               name="現在地"
-              position={{lat: 35.660617, lng:139.743686}}
+              position={{lat: this.props.location.query.lat, lng:this.props.location.query.lng}}
               key={'now'} />);
 
     const country = parse_country(this.state.country);
