@@ -197,7 +197,8 @@ export default class Eat extends React.Component {
           )
         }
         if (typeof(item.opentime) !== 'object') {
-          opentime = <div className='spot_item_opentime'>{item.opentime}</div>
+          let opentime_tmp = item.opentime.replace(/<BR>/g, '');
+          opentime = <div className='spot_item_opentime'>{opentime_tmp}</div>
         }
         if (typeof(item.pr.pr_long) !== 'object') {
           let message = item.pr.pr_long;
