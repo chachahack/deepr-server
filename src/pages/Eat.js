@@ -204,12 +204,24 @@ export default class Eat extends React.Component {
 
         return (
           <Card className='spot_item' onClick={this.onTranslationButtonClick.bind(this, i)} key={i}>
-            <CardHeader title={item.name}
-                        subtitle={pr}/>
             <CardText>
-              {img}
-              {opentime}
-              {budget}
+              <div className="spot_custom_image">
+                {img}
+              </div>
+              <div className="spot_custom_right">
+                <div className="spot_custom_name">
+                  {item.name}
+                </div>
+                <div className="spot_custom_pr">
+                  {pr}
+                </div>
+                <div className="spot_custom_opentime">
+                  {opentime}
+                </div>
+                <div className="spot_custom_budget">
+                  {budget}
+                </div>
+              </div>
             </CardText>
           </Card>
         )
@@ -237,7 +249,7 @@ export default class Eat extends React.Component {
 
     var profile = {
       "user_name": "Tom",
-      "age": "28歳",
+      "age": "28",
       "day": "2",
       "from": "カリフォルニア",
       "hobby": ['ダーツ', 'マラソン'],
@@ -245,10 +257,10 @@ export default class Eat extends React.Component {
     }
 
     const message = (
-      <div className="prof">初めまして！僕の名前は<span id="user_name">{profile['user_name']}</span>といいます。
-      <span id="age">{profile['age']}歳</span>で、<span id="day">{profile['day']}</span>日前に<span id="from">{profile['from']}</span>から日本に来ました。
-      趣味は<span id="hobby1">{profile['hobby'][0]}</span>と<span id="hobby2">{profile['hobby'][1]}</span>です。
-      僕は今、<span id="search4">{mood + country}</span>を探しています。
+      <div className="prof">初めまして！僕の名前は<span className="bold">{profile['user_name']}</span>といいます。
+      <span className="bold">{profile['age']}歳</span>で、<span className="bold">{profile['day']}</span>日前に<span className="bold">{profile['from']}</span>から日本に来ました。
+      趣味は<span className="bold">{profile['hobby'][0]}</span>と<span className="bold">{profile['hobby'][1]}</span>です。<br />
+      僕は今<span className="bold">{mood + country}ディナー</span>レストランを探しています。
       もしオススメのお店を知っていたら、ぜひ教えてください！
     </div>)
 
@@ -261,7 +273,7 @@ export default class Eat extends React.Component {
         <Profile name='Tom Gibson'
                  message={message}
                  show={!this.state.isEnglish} />
-        <div className='map_message'>
+        <div className='map_message bold'>
           {map_message}
         </div>
         <div className='map'>
@@ -274,7 +286,7 @@ export default class Eat extends React.Component {
                {marker_list}
           </Map>
         </div>
-        <div className='where_message'>
+        <div className='where_message bold'>
           {where_message}
         </div>
         <div className='spot_list'>

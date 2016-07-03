@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 const styles = {
   icon : {
-    'height': 120,
-    'width': 120,
-    'borderRadius': 120,
+    'height': 70,
+    'width': 70,
+    'borderRadius': 70,
     'display': 'block',
     'marginLeft': 'auto',
     'marginRight': 'auto',
@@ -27,9 +27,13 @@ export default class Profile extends React.Component {
     if (this.props.show) {
       return (
         <div className='profile'>
-          <img style={styles.icon} src='https://pbs.twimg.com/profile_images/680695751542837248/lVoqPal2.jpg'/>
-          <div className='profile_name'>
-            {this.props.name}
+          <div className="profile_top">
+            <div className="profile_image">
+              <img style={styles.icon} src='https://pbs.twimg.com/profile_images/680695751542837248/lVoqPal2.jpg'/>
+            </div>
+            <div className='profile_name'>
+              {this.props.name}
+            </div>
           </div>
           <div className='profile_message'>
             {this.props.message}
