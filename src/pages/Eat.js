@@ -260,6 +260,7 @@ export default class Eat extends React.Component {
     const country = parse_country(this.state.country);
     const mood = parse_mood(this.state.mood);
     const seen = seen_table[this.state.seen];
+    const freeword = this.state.freeword;
 
     var profile = {
       "user_name": "Tom",
@@ -268,12 +269,15 @@ export default class Eat extends React.Component {
       "from": "カリフォルニア",
       "hobby": ['ダーツ', 'マラソン']
     }
-
+    let msg = mood + country + seen;
+    if (freeword != '') {
+      msg = freeword;
+    }
     const message = (
       <div className="prof">初めまして！僕の名前は<span className="bold">{profile['user_name']}</span>といいます。
       <span className="bold">{profile['age']}歳</span>で、<span className="bold">{profile['day']}</span>日前に<span className="bold">{profile['from']}</span>から日本に来ました。
       趣味は<span className="bold">{profile['hobby'][0]}</span>と<span className="bold">{profile['hobby'][1]}</span>です。<br />
-      僕は今<span className="bold">{mood + country + seen}</span>を探しています。
+      僕は今<span className="bold">{ msg }</span>を探しています。
       もしオススメのお店を知っていたら、ぜひ教えてください！
     </div>)
 
