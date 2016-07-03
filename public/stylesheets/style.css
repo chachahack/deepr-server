@@ -1,7 +1,8 @@
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  padding-top: 50px;
+  padding-left: auto;
+  padding-right: auto;
 }
 body {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -23,18 +24,29 @@ a {
   text-align: center;
 }
 
-.profile_icon {
+.profile_top {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width: 238px;
+    margin: 0 auto;
+}
+
+.profile_name {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .profile_name {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+
 }
 
 .profile_message {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
-  padding: 10px;
+  padding: 20px 10px 0px 10px;
 }
 
 .map {
@@ -45,7 +57,7 @@ a {
 
 .map_view {
   z-index: 1;
-  mergine: 30px:
+  mergin: 30px:
   height: 300px;
   margin-bottom: 5px;
 }
@@ -57,7 +69,8 @@ a {
 }
 
 .spot_item {
-  width: 100%;
+  width: 350px;
+  height: 100px;
   margin-bottom: 15px;
 }
 
@@ -68,4 +81,28 @@ a {
 
 .spot_item_name {
   border: 1px solid #FF00FF;
+}
+
+.spot_custom_right {
+  display: inline-block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.profile_message {
+  font-size: 74%;
+  text-align: left;
+  line-height: 2;
+}
+
+.map_message, .where_message {
+  font-size: 88%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.map {
+  padding-top: 5px;
 }
